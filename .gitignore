@@ -1,0 +1,27 @@
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Carpeta temporal o de descarte
+_to_delete/
+
+# Entornos (no subir secretos)
+.env
+.env.*
+!.env.example
+.secrets.env
+
+# Sistema operativo / IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+*~
+
+# Builds / artefactos
+dist/
+build/
+coverage/
+.nyc_output/
+

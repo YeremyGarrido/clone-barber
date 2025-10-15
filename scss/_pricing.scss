@@ -1,0 +1,106 @@
+@import 'variables';
+
+/* ===== PRICING SECTION ===== */
+.pricing {
+    padding: $section-padding;
+    background: $light-color;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: $white-color;
+    padding: 3rem 2rem;
+    border-radius: $radius-lg;
+    box-shadow: $shadow;
+    text-align: center;
+    transition: $transition;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: $shadow-dark;
+}
+
+.pricing-card.featured {
+    border-color: $primary-color;
+    transform: scale(1.05);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: $primary-color;
+    color: $white-color;
+    padding: 0.5rem 1.5rem;
+    border-radius: $radius-pill;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $dark-color;
+}
+
+.price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.currency {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-right: 0.3rem;
+}
+
+.amount {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $primary-color;
+    line-height: 1;
+}
+
+.pricing-features {
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 1rem 0;
+    border-bottom: 1px solid $border-color;
+    color: $text-color;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features .check {
+    color: $primary-color;
+    font-weight: 700;
+}
+
+.pricing-features li.disabled {
+    color: $text-light;
+    opacity: 0.5;
+}
+
+.pricing-features li.disabled .check {
+    color: $text-light;
+}

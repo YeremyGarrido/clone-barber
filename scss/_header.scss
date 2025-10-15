@@ -1,0 +1,23 @@
+@import 'variables';
+
+// Estilos para el header
+.header {
+    padding: 1rem 0;
+    
+    &.scrolled {
+        background: linear-gradient(180deg, lighten($dark-color, 10%) 0%, $dark-color 100%);
+    }
+}
+
+.logo-image {
+  max-width: 120px;
+  height: auto;
+  display: block;
+}
+
+.header-logo-image {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

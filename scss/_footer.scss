@@ -1,0 +1,112 @@
+@import 'variables';
+
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(180deg, lighten($dark-color, 3%) 0%, darken($dark-color, 5%) 100%);
+    color: $white-color;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    font-family: $font-secondary;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo span {
+    color: $primary-color;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: $transition;
+}
+
+.footer-links a:hover {
+    color: $primary-color;
+    padding-left: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+}
+
+.footer-social a:hover {
+    background: $primary-color;
+    transform: translateY(-3px);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px; // Can be a variable if needed
+    color: $white-color;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form button {
+    padding: 0.8rem 1.5rem;
+}
+
+.footer-bottom-links a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: $transition;
+}
+
+.footer-bottom-links a:hover {
+    color: $primary-color;
+}
+
+.footer-logo-image {
+  max-width: 80px;  // Un tamaño más pequeño, ajusta si es necesario
+  height: auto;     // Mantiene la proporción
+  display: block;   // Para que ocupe su propio espacio
+  margin-bottom: 15px; // Espacio debajo del logo en el footer
+  margin-right: auto; // Puedes ajustar para alinearlo
+  margin-left: auto; // Puedes ajustar para alinearlo
+}

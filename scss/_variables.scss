@@ -1,0 +1,35 @@
+// ==========================================================================
+// VARIABLES.SCSS
+// Define las variables de colores, fuentes, tamaños, etc.
+// ==========================================================================
+
+// ===== COLORES =====
+$primary-color: #d4a574;
+$secondary-color: #8b6f47;
+$dark-color: #1a1a1a;
+$light-color: #f8f8f8;
+$white-color: #ffffff;
+$text-color: #333333;
+$color-text-dark: #333333;
+$text-light: #666666;
+$border-color: #e0e0e0;
+
+// ===== FUENTES =====
+$font-primary: 'Lato', sans-serif;
+$font-secondary: 'Playfair Display', serif;
+
+// ===== TAMAÑOS Y ESPACIADO =====
+$container-max-width: 1200px;
+$radius-pill: 50px;
+$radius-card: 15px;
+
+// ===== SOMBRAS =====
+$shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+$shadow-dark: 0 10px 40px rgba(0, 0, 0, 0.2);
+$shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.05);
+$shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.12), 0 12px 32px rgba(0, 0, 0, 0.08);
+
+// ===== TRANSICIONES =====
+$transition: all 0.3s ease;
+$transition-transform: transform 0.2s ease;
+$transition-shadow: box-shadow 0.3s ease;

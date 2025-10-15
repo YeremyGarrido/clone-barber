@@ -1,0 +1,26 @@
+// ==========================================================================
+// STYLES.SCSS
+// Este es el archivo principal que compila todos los parciales de SASS.
+// El orden de importación es crucial.
+// ==========================================================================
+
+// 2. BASE
+// Contiene el reset y estilos para etiquetas HTML básicas (body, p, a, etc.).
+@import 'base';
+
+// 3. LAYOUT
+// Contiene los estilos para las partes principales de la maquetación del sitio.
+@import 'layout';
+@import 'header';
+@import 'footer';
+
+// 4. COMPONENTS
+// Contiene estilos para componentes reutilizables como botones, tarjetas, etc.
+@import 'components';
+@import 'about';
+@import 'galeria';
+@import 'testimonials';
+
+// 5. RESPONSIVE
+// Contiene todas las media queries.
+@import 'responsive';

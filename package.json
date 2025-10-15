@@ -1,0 +1,19 @@
+{
+  "name": "la-diarquia-frontend",
+  "version": "1.0.0",
+  "description": "Frontend - La Diarquía Barbería",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -p 5500",
+    "preview": "npx serve . -p 5500"
+  },
+  "keywords": [
+    "barbershop",
+    "frontend",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "La Diarquía Team",
+  "license": "ISC"
+}
