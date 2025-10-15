@@ -153,3 +153,5 @@ dist/
 
 # Carpeta temporal o de descarte
 _to_delete/
+.vscode/
+.env.*
