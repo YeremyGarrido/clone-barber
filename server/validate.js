@@ -238,32 +238,37 @@ try {
 console.log('\n🔧 Verificando servicios...\n');
 
 const services = [
-    'src/services/booking.service.js',
-    'src/services/googleCalendar.service.js',
-    'src/services/whatsapp.service.js',
-    'src/services/validation.service.js',
+    { file: 'src/services/booking.service.js', requiresEnv: false },
+    { file: 'src/services/googleCalendar.service.js', requiresEnv: true },
+    { file: 'src/services/whatsapp.service.js', requiresEnv: true },
+    { file: 'src/services/validation.service.js', requiresEnv: false },
 ];
 
-services.forEach(service => {
+services.forEach(svc => {
     try {
-        const content = fs.readFileSync(service, 'utf8');
+        const content = fs.readFileSync(svc.file, 'utf8');
         
-        // Verificar que use variables de entorno
-        if (content.includes('process.env.')) {
-            success(`${path.basename(service)} usa variables de entorno`);
+        // Verificar que use variables de entorno solo si corresponde
+        if (svc.requiresEnv) {
+            if (content.includes('process.env.')) {
+                success(`${path.basename(svc.file)} usa variables de entorno`);
+            } else {
+                error(`${path.basename(svc.file)} debería usar variables de entorno`);
+            }
         } else {
-            warning(`${path.basename(service)} no parece usar variables de entorno`);
+            // Informativo para servicios que no requieren env vars
+            info(`${path.basename(svc.file)} no requiere variables de entorno`);
         }
 
         // Verificar exports
         if (content.includes('module.exports')) {
-            success(`${path.basename(service)} exporta funciones`);
+            success(`${path.basename(svc.file)} exporta funciones`);
         } else {
-            error(`${path.basename(service)} no exporta nada`);
+            error(`${path.basename(svc.file)} no exporta nada`);
         }
 
     } catch (err) {
-        error(`Error leyendo ${service}: ${err.message}`);
+        error(`Error leyendo ${svc.file}: ${err.message}`);
     }
 });
 
