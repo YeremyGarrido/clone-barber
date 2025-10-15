@@ -1,4 +1,4 @@
-# 🔥 BarbeX - Clone de Barbería Premium
+# 🔥 La Diarquía Barbería Premium
 
 ## 📋 Descripción
 Clon completo y funcional de una página web de barbería moderna, lista para personalizar en VS Code.
