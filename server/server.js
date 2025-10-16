@@ -27,11 +27,15 @@ app.use(helmet());
 
 // Configuración de CORS
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || '*', // En producción, especificar el dominio exacto
+    origin: [
+        "https://clone-barber.vercel.app", // tu frontend en Vercel
+        "http://localhost:3000"             // útil para pruebas locales
+    ],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 };
+
 app.use(cors(corsOptions));
 
 // ==============================================
